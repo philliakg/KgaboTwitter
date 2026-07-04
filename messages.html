@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages / KgaboTwitter</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="dark-toggle">
+
+  <div class="page">
+    <header class="left-sidebar">
+      <div class="sidebar-top">
+        <a href="home.html" class="logo" title="KgaboTwitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+
+        <nav class="main-nav">
+          <a href="home.html" class="nav-item">
+            <i class="bi bi-house-door"></i><span>Home</span>
+          </a>
+          <a href="explore.html" class="nav-item">
+            <i class="bi bi-search"></i><span>Explore</span>
+          </a>
+          <a href="notifications.html" class="nav-item">
+            <i class="bi bi-bell"></i><span>Notifications</span>
+          </a>
+          <a href="messages.html" class="nav-item active">
+            <i class="bi bi-envelope-fill"></i><span>Messages</span>
+          </a>
+          <a href="bookmarks.html" class="nav-item">
+            <i class="bi bi-bookmark"></i><span>Bookmarks</span>
+          </a>
+          <a href="profile.html" class="nav-item">
+            <i class="bi bi-person"></i><span>Profile</span>
+          </a>
+          <a href="#moreMenu" class="nav-item">
+            <i class="bi bi-three-dots"></i><span>More</span>
+          </a>
+        </nav>
+
+        <a href="#tweetModal" class="tweet-btn">
+          <span class="tweet-btn-text">Tweet</span>
+          <i class="bi bi-feather tweet-btn-icon"></i>
+        </a>
+      </div>
+
+      <a href="#accountMenu" class="profile-action" title="Account">
+        <img src="resources/avatar-Kgabo.jpg" alt="my avatar" class="avatar">
+        <div class="profile-names">
+          <span class="profile-name">Kgabo</span>
+          <span class="profile-handle">@KgaboL</span>
+        </div>
+        <i class="bi bi-three-dots"></i>
+      </a>
+    </header>
+    <main class="timeline">
+      <div class="timeline-header">
+        <h1>Messages</h1>
+        <div class="icon-btns">
+          <label for="dark-toggle" class="star-btn dark-mode-btn" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-fill"></i>
+            <i class="bi bi-sun-fill"></i>
+          </label>
+<button class="star-btn" title="Settings">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a href="#newMessageModal" class="star-btn" title="New message">
+            <i class="bi bi-envelope-plus"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="search-area msg-search">
+        <div class="search-box">
+          <input type="text" placeholder="Search Direct Messages">
+          <button type="button" class="search-btn" title="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="convo">
+        <img src="resources/avatar-naledi.jpg" alt="avatar" class="avatar">
+        <div class="convo-body">
+          <div class="convo-top">
+            <span class="tweet-name">Mike M</span>
+            <span class="tweet-meta">@Mike &middot; 2h</span>
+          </div>
+          <p class="convo-preview">you: thanks!! the hover colours took forever 🙏</p>
+        </div>
+      </div>
+
+      <div class="convo">
+        <img src="resources/avatar-sipho.jpg" alt="avatar" class="avatar">
+        <div class="convo-body">
+          <div class="convo-top">
+            <span class="tweet-name">Thandeka K</span>
+            <span class="tweet-meta">@Thandeka &middot; 5h</span>
+          </div>
+          <p class="convo-preview">lol the footer is not responsive ON PURPOSE, read the spec</p>
+        </div>
+      </div>
+
+      <div class="convo">
+        <img src="resources/avatar-zaio.jpg" alt="avatar" class="avatar">
+        <div class="convo-body">
+          <div class="convo-top">
+            <span class="tweet-name">ZAIO</span>
+            <span class="tweet-meta">@zaio_io &middot; 1d</span>
+          </div>
+          <p class="convo-preview">Don't forget to submit your Loom video before Friday!</p>
+        </div>
+      </div>
+
+      <div class="convo">
+        <img src="resources/avatar-thabo.jpg" alt="avatar" class="avatar">
+        <div class="convo-body">
+          <div class="convo-top">
+            <span class="tweet-name">Boikie Boi</span>
+            <span class="tweet-meta">@Boikie_boi &middot; 2d</span>
+          </div>
+          <p class="convo-preview">flexbox on breakfast?? explain yourself</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <div class="modal-overlay" id="newMessageModal">
+    <div class="tweet-modal">
+      <a href="#" class="modal-close" title="Close"><i class="bi bi-x-lg"></i></a>
+      <h2 class="modal-title">New message</h2>
+      <div class="modal-body-pad">
+        <input type="text" class="form-field" placeholder="Search people">
+        <div class="convo">
+          <img src="resources/avatar-naledi.jpg" alt="avatar" class="avatar">
+          <div class="convo-body">
+            <div class="convo-top">
+              <span class="tweet-name">Lebogang M</span>
+              <span class="tweet-meta">@lebo_dev</span>
+            </div>
+          </div>
+        </div>
+        <div class="convo">
+          <img src="resources/avatar-csstricks.jpg" alt="avatar" class="avatar">
+          <div class="convo-body">
+            <div class="convo-top">
+              <span class="tweet-name">CSS Tricks</span>
+              <span class="tweet-meta">@css_tricks</span>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="tweet-btn small" style="float: right;">Next</a>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="tweetModal">
+    <div class="tweet-modal">
+      <a href="#" class="modal-close" title="Close"><i class="bi bi-x-lg"></i></a>
+      <div class="compose">
+        <img src="resources/avatar-Kgabo.jpg" alt="my avatar" class="avatar">
+        <div class="compose-right">
+          <textarea placeholder="What's happening?" rows="4"></textarea>
+          <div class="compose-actions">
+            <div class="compose-icons">
+              <i class="bi bi-image"></i>
+              <i class="bi bi-filetype-gif"></i>
+              <i class="bi bi-bar-chart"></i>
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <a href="#" class="tweet-btn small">Tweet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-overlay" id="moreMenu">
+    <a href="#" class="menu-backdrop" aria-label="Close menu"></a>
+    <div class="menu-panel more-panel">
+      <a href="settings.html" class="menu-item"><i class="bi bi-gear"></i>Settings and privacy</a>
+      <a href="help.html" class="menu-item"><i class="bi bi-question-circle"></i>Help Center</a>
+      <a href="display.html" class="menu-item"><i class="bi bi-brush"></i>Display</a>
+      <a href="shortcuts.html" class="menu-item"><i class="bi bi-keyboard"></i>Keyboard shortcuts</a>
+    </div>
+  </div>
+  <div class="menu-overlay" id="accountMenu">
+    <a href="#" class="menu-backdrop" aria-label="Close menu"></a>
+    <div class="menu-panel account-panel">
+      <a href="profile.html" class="menu-item"><i class="bi bi-person-gear"></i>Edit profile</a>
+      <a href="index.html" class="menu-item logout"><i class="bi bi-box-arrow-right"></i>Log out @KgaboL</a>
+    </div>
+  </div>
+
+</body>
+</html>
