@@ -3,32 +3,319 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in /KgaboTwitter</title>
-
+  <title>Home / KgaboTwitter</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <input type="checkbox" id="dark-toggle">
-  <div class="login-page">
-    <div class="login-card">
-      <label for="dark-toggle" class="star-btn dark-mode-btn login-dark-mode" title="Toggle dark mode" aria-label="Toggle dark mode">
-        <i class="bi bi-moon-fill"></i>
-        <i class="bi bi-sun-fill"></i>
-      </label>
-      <i class="bi bi-twitter"></i>
-      <h1>Sign in to KgaboTwitter</h1>
-      <form action="home.html">
-        <input type="text" placeholder="Phone, email or username" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit" class="tweet-btn">Log in</button>
-      </form>
 
-      <div class="login-links">
-        <a href="#">Forgot password?</a> &middot;
-        <a href="#">Sign up for KgaboTwitter</a>
+  <div class="page">
+    <header class="left-sidebar">
+      <div class="sidebar-top">
+        <a href="index.html" class="logo" title="KgaboTwitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-item active">
+            <i class="bi bi-house-door-fill"></i><span>Home</span>
+          </a>
+          <a href="explore.html" class="nav-item">
+            <i class="bi bi-search"></i><span>Explore</span>
+          </a>
+          <a href="notifications.html" class="nav-item">
+            <i class="bi bi-bell"></i><span>Notifications</span>
+          </a>
+          <a href="messages.html" class="nav-item">
+            <i class="bi bi-envelope"></i><span>Messages</span>
+          </a>
+          <a href="bookmarks.html" class="nav-item">
+            <i class="bi bi-bookmark"></i><span>Bookmarks</span>
+          </a>
+          <a href="profile.html" class="nav-item">
+            <i class="bi bi-person"></i><span>Profile</span>
+          </a>
+          <a href="#moreMenu" class="nav-item">
+            <i class="bi bi-three-dots"></i><span>More</span>
+          </a>
+        </nav>
+        <a href="#tweetModal" class="tweet-btn">
+          <span class="tweet-btn-text">Tweet</span>
+          <i class="bi bi-feather tweet-btn-icon"></i>
+        </a>
       </div>
+      <a href="#accountMenu" class="profile-action" title="Account">
+        <img src="resources/avatar-Kgabo.jpg" alt="my avatar" class="avatar">
+        <div class="profile-names">
+          <span class="profile-name">Kgabo</span>
+          <span class="profile-handle">@KgaboL</span>
+        </div>
+        <i class="bi bi-three-dots"></i>
+      </a>
+    </header>
+    <main class="timeline">
+      <div class="timeline-header">
+        <h1>Home</h1>
+        <div class="icon-btns">
+          <label for="dark-toggle" class="star-btn dark-mode-btn" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-fill"></i>
+            <i class="bi bi-sun-fill"></i>
+          </label>
+          <button class="star-btn" title="Top Tweets">
+            <i class="bi bi-stars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="compose">
+        <img src="resources/avatar-Kgabo.jpg" alt="my avatar" class="avatar">
+        <div class="compose-right">
+          <textarea placeholder="What's happening?" rows="2"></textarea>
+          <div class="compose-actions">
+            <div class="compose-icons">
+              <i class="bi bi-image"></i>
+              <i class="bi bi-filetype-gif"></i>
+              <i class="bi bi-bar-chart"></i>
+              <i class="bi bi-emoji-smile"></i>
+              <i class="bi bi-calendar3"></i>
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <button type="button" class="tweet-btn small">Tweet</button>
+          </div>
+        </div>
+      </div>
+      <article class="tweet">
+        <img src="resources/avatar-diego.jpg" alt="avatar" class="avatar">
+        <div class="tweet-body">
+          <div class="tweet-top">
+            <span class="tweet-name">Diego</span>
+            <span class="tweet-meta">@woza_diego &middot; 2h</span>
+          </div>
+          <p>Now it makes sense ukuthi why General Dumisani Khumalo said almost the entire SAPS Gauteng is working for the cartel #MadlangaCommission</p>
+          <div class="tweet-actions">
+            <a href="#replyModal" class="action reply" title="Reply"><i class="bi bi-chat"></i><span>48</span></a>
+            <label class="action repost" title="Repost"><input type="checkbox"><i class="bi bi-repeat off"></i><i class="bi bi-repeat on"></i><span class="off">112</span><span class="on">113</span></label>
+            <label class="action like" title="Like"><input type="checkbox"><i class="bi bi-heart off"></i><i class="bi bi-heart-fill on"></i><span class="off">1.2K</span><span class="on">1.2K</span></label>
+            <label class="action views" title="Views"><input type="checkbox"><i class="bi bi-bar-chart off"></i><i class="bi bi-bar-chart-fill on"></i><span class="off">20K</span><span class="on">20K</span></label>
+            <label class="action bookmark" title="Bookmark"><input type="checkbox"><i class="bi bi-bookmark off"></i><i class="bi bi-bookmark-fill on"></i></label>
+          </div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <img src="resources/avatar-kevin.jpg" alt="avatar" class="avatar">
+        <div class="tweet-body">
+          <div class="tweet-top">
+            <span class="tweet-name">Kevin W.</span>
+            <span class="tweet-meta">@Brink_Thinker &middot; 5h</span>
+          </div>
+          <p>There's always someone sharper! This cashier just owned the moment 😂😂😂</p>
+          <div class="tweet-actions">
+            <a href="#replyModal" class="action reply" title="Reply"><i class="bi bi-chat"></i><span>231</span></a>
+            <label class="action repost" title="Repost"><input type="checkbox"><i class="bi bi-repeat off"></i><i class="bi bi-repeat on"></i><span class="off">894</span><span class="on">895</span></label>
+            <label class="action like" title="Like"><input type="checkbox"><i class="bi bi-heart off"></i><i class="bi bi-heart-fill on"></i><span class="off">5.4K</span><span class="on">5.4K</span></label>
+            <label class="action views" title="Views"><input type="checkbox"><i class="bi bi-bar-chart off"></i><i class="bi bi-bar-chart-fill on"></i><span class="off">301K</span><span class="on">301K</span></label>
+            <label class="action bookmark" title="Bookmark"><input type="checkbox"><i class="bi bi-bookmark off"></i><i class="bi bi-bookmark-fill on"></i></label>
+          </div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <img src="resources/avatar-siyakhula.jpg" alt="avatar" class="avatar">
+        <div class="tweet-body">
+          <div class="tweet-top">
+            <span class="tweet-name">Siyakhula</span>
+            <span class="tweet-meta">@misumuzi_4 &middot; 8h</span>
+          </div>
+          <p>🎈‼️🔥 Major-General Feroz Khan might as well stay "unconscious" until he reaches the other side. Things are really not looking good for him here. 😕
+            We hear voices 🥺
+            #MadlangaCommission</p>
+          <div class="tweet-actions">
+            <a href="#replyModal" class="action reply" title="Reply"><i class="bi bi-chat"></i><span>19</span></a>
+            <label class="action repost" title="Repost"><input type="checkbox"><i class="bi bi-repeat off"></i><i class="bi bi-repeat on"></i><span class="off">42</span><span class="on">43</span></label>
+            <label class="action like" title="Like"><input type="checkbox"><i class="bi bi-heart off"></i><i class="bi bi-heart-fill on"></i><span class="off">318</span><span class="on">319</span></label>
+            <label class="action views" title="Views"><input type="checkbox"><i class="bi bi-bar-chart off"></i><i class="bi bi-bar-chart-fill on"></i><span class="off">9.1K</span><span class="on">9.1K</span></label>
+            <label class="action bookmark" title="Bookmark"><input type="checkbox"><i class="bi bi-bookmark off"></i><i class="bi bi-bookmark-fill on"></i></label>
+          </div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <img src="resources/avatar-dhea.jpg" alt="avatar" class="avatar">
+        <div class="tweet-body">
+          <div class="tweet-top">
+            <span class="tweet-name">Dhea comel</span>
+            <span class="tweet-meta">@realistise &middot; 12h</span>
+          </div>
+          <p>Benefits of t-shirts for hair 😂</p>
+          <div class="tweet-actions">
+            <a href="#replyModal" class="action reply" title="Reply"><i class="bi bi-chat"></i><span>77</span></a>
+            <label class="action repost" title="Repost"><input type="checkbox"><i class="bi bi-repeat off"></i><i class="bi bi-repeat on"></i><span class="off">260</span><span class="on">261</span></label>
+            <label class="action like" title="Like"><input type="checkbox"><i class="bi bi-heart off"></i><i class="bi bi-heart-fill on"></i><span class="off">2.9K</span><span class="on">2.9K</span></label>
+            <label class="action views" title="Views"><input type="checkbox"><i class="bi bi-bar-chart off"></i><i class="bi bi-bar-chart-fill on"></i><span class="off">88K</span><span class="on">88K</span></label>
+            <label class="action bookmark" title="Bookmark"><input type="checkbox"><i class="bi bi-bookmark off"></i><i class="bi bi-bookmark-fill on"></i></label>
+          </div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <img src="resources/avatar-haji.jpg" alt="avatar" class="avatar">
+        <div class="tweet-body">
+          <div class="tweet-top">
+            <span class="tweet-name">Haji</span>
+            <span class="tweet-meta">@khal_haji &middot; 1d</span>
+          </div>
+          <p>The Madlanga Commission has you all by the throat 🤣 #MadlangaCommission</p>
+          <div class="tweet-actions">
+            <a href="#replyModal" class="action reply" title="Reply"><i class="bi bi-chat"></i><span>12</span></a>
+            <label class="action repost" title="Repost"><input type="checkbox"><i class="bi bi-repeat off"></i><i class="bi bi-repeat on"></i><span class="off">34</span><span class="on">35</span></label>
+            <label class="action like" title="Like"><input type="checkbox"><i class="bi bi-heart off"></i><i class="bi bi-heart-fill on"></i><span class="off">402</span><span class="on">403</span></label>
+            <label class="action views" title="Views"><input type="checkbox"><i class="bi bi-bar-chart off"></i><i class="bi bi-bar-chart-fill on"></i><span class="off">15K</span><span class="on">15K</span></label>
+            <label class="action bookmark" title="Bookmark"><input type="checkbox"><i class="bi bi-bookmark off"></i><i class="bi bi-bookmark-fill on"></i></label>
+          </div>
+        </div>
+      </article>
+    </main>
+    <aside class="right-sidebar">
+      <div class="search-area">
+        <div class="search-box">
+          <input type="text" placeholder="Search KgaboTwitter">
+          <button type="button" class="search-btn" title="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <div class="search-dropdown">
+          <p class="search-hint">Try searching for people, hashtags, or keywords</p>
+          <a href="#" class="search-recent"><i class="bi bi-search"></i>#100DaysOfCode</a>
+          <a href="#" class="search-recent"><i class="bi bi-search"></i>flexbox tutorial</a>
+          <a href="#" class="search-recent"><i class="bi bi-person"></i>@zaio_io</a>
+        </div>
+      </div>
+      <section class="trends">
+        <h2>Trends for you</h2>
+        <div class="trend">
+          <span class="trend-meta">Trending in South Africa</span>
+          <span class="trend-name">#loadshedding</span>
+          <span class="trend-count">54.2K Tweets</span>
+        </div>
+        <div class="trend">
+          <span class="trend-meta">Technology &middot; Trending</span>
+          <span class="trend-name">#100DaysOfCode</span>
+          <span class="trend-count">21K Tweets</span>
+        </div>
+        <div class="trend">
+          <span class="trend-meta">Trending</span>
+          <span class="trend-name">Pologamist</span>
+          <span class="trend-count">8,431 Tweets</span>
+        </div>
+        <div class="trend">
+          <span class="trend-meta">Sports &middot; Trending</span>
+          <span class="trend-name">Springboks</span>
+          <span class="trend-count">102K Tweets</span>
+        </div>
+        <div class="trend">
+          <span class="trend-meta">Music &middot; Trending</span>
+          <span class="trend-name">#AmapianoFriday</span>
+          <span class="trend-count">33.7K Tweets</span>
+        </div>
+        <a href="explore.html" class="show-more">Show more</a>
+      </section>
+      <section class="trends">
+        <h2>Who to follow</h2>
+        <div class="follow">
+          <img src="resources/avatar-csstricks.jpg" alt="avatar" class="avatar">
+          <div class="profile-names">
+            <span class="profile-name">CSS Tricks</span>
+            <span class="profile-handle">@css_tricks</span>
+          </div>
+          <button type="button" class="follow-btn">Follow</button>
+        </div>
+        <div class="follow">
+          <img src="resources/avatar-htmldaily.jpg" alt="avatar" class="avatar">
+          <div class="profile-names">
+            <span class="profile-name">HTML Daily</span>
+            <span class="profile-handle">@html_daily</span>
+          </div>
+          <button type="button" class="follow-btn">Follow</button>
+        </div>
+        <a href="#" class="show-more">Show more</a>
+      </section>
+      <footer class="page-footer">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Ads info</a>
+        <a href="#">More</a>
+        <span>&copy; 2026 KgaboTwitter Corp.</span>
+      </footer>
+    </aside>
+
+  </div>
+  <div class="modal-overlay" id="tweetModal">
+    <div class="tweet-modal">
+      <a href="#" class="modal-close" title="Close"><i class="bi bi-x-lg"></i></a>
+      <div class="compose">
+        <img src="resources/avatar-Kgabo.jpg" alt="my avatar" class="avatar">
+        <div class="compose-right">
+          <textarea placeholder="What's happening?" rows="4"></textarea>
+          <div class="compose-actions">
+            <div class="compose-icons">
+              <i class="bi bi-image"></i>
+              <i class="bi bi-filetype-gif"></i>
+              <i class="bi bi-bar-chart"></i>
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <a href="#" class="tweet-btn small">Tweet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="replyModal">
+    <div class="tweet-modal">
+      <a href="#" class="modal-close" title="Close"><i class="bi bi-x-lg"></i></a>
+      <div class="reply-quote">
+        <img src="resources/avatar-naledi.jpg" alt="avatar" class="avatar">
+        <div>
+          <div class="tweet-top">
+            <span class="tweet-name">Naledi M</span>
+            <span class="tweet-meta">@naledi_dev &middot; 2h</span>
+          </div>
+          <p>day 3 of my html course and I just centered a div on the FIRST try. please hold your applause 👏</p>
+          <span class="replying-to">Replying to <span class="blue">@naledi_dev</span></span>
+        </div>
+      </div>
+      <div class="compose">
+        <img src="resources/avatar-Kgabo.jpg" alt="my avatar" class="avatar">
+        <div class="compose-right">
+          <textarea placeholder="Tweet your reply" rows="3"></textarea>
+          <div class="compose-actions">
+            <div class="compose-icons">
+              <i class="bi bi-image"></i>
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <a href="#" class="tweet-btn small">Reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-overlay" id="moreMenu">
+    <a href="#" class="menu-backdrop" aria-label="Close menu"></a>
+    <div class="menu-panel more-panel">
+      <a href="settings.html" class="menu-item"><i class="bi bi-gear"></i>Settings and privacy</a>
+      <a href="help.html" class="menu-item"><i class="bi bi-question-circle"></i>Help Center</a>
+      <a href="display.html" class="menu-item"><i class="bi bi-brush"></i>Display</a>
+      <a href="shortcuts.html" class="menu-item"><i class="bi bi-keyboard"></i>Keyboard shortcuts</a>
+    </div>
+  </div>
+  <div class="menu-overlay" id="accountMenu">
+    <a href="#" class="menu-backdrop" aria-label="Close menu"></a>
+    <div class="menu-panel account-panel">
+      <a href="profile.html" class="menu-item"><i class="bi bi-person-gear"></i>Edit profile</a>
+      <a href="login.html" class="menu-item logout"><i class="bi bi-box-arrow-right"></i>Log out @KgaboL</a>
     </div>
   </div>
 
